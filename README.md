@@ -12,9 +12,9 @@ check-list:check-list:<br>
 [✓] - Criar as entidades<br>
 [✓] - Da um check se o servidor está funcionando<br>
 [✓] - Criar a service para a entidade escolhida, e fazer o CRUD<br>
-[] - Fazer a controller<br>
-[] - Criar as rotas no arquivo de rotas<br>
-[] - Testar as rotas<br>
+[✓] - Fazer a controller<br>
+[✓] - Criar as rotas no arquivo de rotas<br>
+[✓] - Testar as rotas<br>
 [] - Partir para as rotas com regra de negócio<br>
 
 Entidades:<br>
