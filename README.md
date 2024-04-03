@@ -42,7 +42,7 @@ Categorias:<br>
 [✓]Rota para excluir uma categoria.<br>
 
 Funcionalidades Adicionais utilizando Métodos de Array:<br>
-Rota para filtrar tarefas por categoria.<br>
+[✓]Rota para filtrar tarefas por categoria.<br>
 Rota para listar tarefas concluídas.<br>
 Rota para listar tarefas pendentes.<br>
 Rota para listar tarefas que vencem em um determinado período.<br>
