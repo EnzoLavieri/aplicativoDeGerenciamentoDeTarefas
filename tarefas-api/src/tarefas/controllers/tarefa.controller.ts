@@ -27,6 +27,19 @@ class TarefaController {
     const deleteMessage = await tarefaService.delete(req.params.id);
     return res.json(deleteMessage);
   }
+
+  // ----------- Funcionalidades Adicionais utilizando Métodos de Array: -----------
+
+  async findPorCategoria(req: Request, res: Response) {
+    const categoria = req.params.categoria;
+    const filteredTarefas = await tarefaService.findPorCategoria(categoria);
+    return res.json(filteredTarefas);
+  }
+  // terminar 2 item
+  async findConcluidas(req: Request, res: Response) {
+    const tarefasConcluidas = await tarefaService.findConcluidas();
+    return res.json(tarefasConcluidas);
+  }
 }
 
 export default new TarefaController();

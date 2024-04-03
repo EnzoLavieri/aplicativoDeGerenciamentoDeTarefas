@@ -9,11 +9,19 @@ routes.post("/categorias", categoriaController.create);
 routes.get("/categorias", categoriaController.findAll);
 routes.get("/categorias/:id", categoriaController.findById);
 routes.put("/categorias/:id", categoriaController.update);
-routes.delete("/categorias/:id", usuarioController.delete);
+routes.delete("/categorias/:id", categoriaController.delete);
 
 routes.post("/tarefas", tarefaController.create);
 routes.get("/tarefas", tarefaController.findAll);
 routes.get("/tarefas/:id", tarefaController.findById);
+//
+
+routes.get(
+  "/tarefas/por-categoria/:categoria",
+  tarefaController.findPorCategoria
+);
+
+//
 routes.put("/tarefas/:id", tarefaController.update);
 routes.delete("/tarefas/:id", tarefaController.delete);
 

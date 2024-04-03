@@ -1,3 +1,6 @@
+import { UsuarioType } from "../types/usuario.type";
+import { CategoriaType } from "../types/categoria.type";
+
 export interface TarefaType {
   id: Number;
   titulo: String;
@@ -5,10 +8,11 @@ export interface TarefaType {
   dataCriacao: Date;
   dataConclusao: Date;
   tipo: String;
-  categoria: String;
+  categoria: CategoriaType;
   status: {
     pendente;
     andamento;
     concluída;
-  }; // usuarioAssociado: Usuario;
+  };
+  usuario: UsuarioType;
 }

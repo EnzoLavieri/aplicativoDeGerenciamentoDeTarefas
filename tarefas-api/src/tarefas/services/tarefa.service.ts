@@ -27,8 +27,8 @@ class TarefaService {
         dataConclusao: tarefa.dataConclusao,
         tipo: tarefa.tipo,
         categoria: tarefa.categoria,
-        status: tarefa.status
-        // usuarioAssociado: tarefa.Usuario
+        status: tarefa.status,
+        usuarioAssociado: tarefa.usuario,
       },
       { new: true }
     );
@@ -41,6 +41,22 @@ class TarefaService {
       return "Tarefa removida com exito.";
     } catch (error) {
       throw new Error(`Erro ao remover tarefa, erro: ${error}`);
+    }
+  }
+
+  // ----------- Funcionalidades Adicionais utilizando Métodos de Array: -----------
+
+  async findPorCategoria(categoria: string) {
+    const filteredTarefas = await tipoTarefa.find({ categoria: categoria });
+    return filteredTarefas;
+  }
+
+  async findConcluidas() {
+    try {
+      const tarefasConcluidas = await tipoTarefa.find({ status: "concluída" });
+      return tarefasConcluidas;
+    } catch (error) {
+      throw new Error(`Erro ao buscar tarefas concluídas: ${error}`);
     }
   }
 }

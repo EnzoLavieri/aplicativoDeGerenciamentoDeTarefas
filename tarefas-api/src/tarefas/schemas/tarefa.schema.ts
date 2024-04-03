@@ -1,5 +1,4 @@
 import { Schema, model } from "mongoose";
-import Usuario from "../schemas/usuario.schema";
 
 const tarefaSchema = new Schema(
   {
@@ -9,15 +8,20 @@ const tarefaSchema = new Schema(
     dataCriacao: Date,
     dataConclusao: Date,
     tipo: String,
-    categoria: String,
-    // status nao ta aparecendo
+    categoria: {
+      type: Schema.Types.ObjectId,
+      ref: "Categoria",
+      default: null,
+    },
     status: {
       type: String,
       enum: ["pendente", "andamento", "concluída"],
     },
-    usuarioAssociado: { type: Schema.Types.ObjectId, ref: "Usuario" },
-    // actions: [{ type: Schema.Types.ObjectId, ref: "Usuario" }],
-    // usuarioAssociado: Usuario,
+    // perguntar se o usuarioAssociado era para funcionar com o objectId, ou outro especificado
+    usuarioAssociado: {
+      type: Schema.Types.ObjectId,
+      ref: "Usuario",
+    },
   },
   { timestamps: true }
 );
