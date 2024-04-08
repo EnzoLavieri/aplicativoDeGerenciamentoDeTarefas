@@ -52,7 +52,7 @@ class TarefaService {
   }
 
   async findConcluidas(status: string) {
-    const concluidasTarefas = await tipoTarefa.find({ status: status });
+    const concluidasTarefas = await tipoTarefa.find({ status: "concluida" });
     return concluidasTarefas;
   }
 }

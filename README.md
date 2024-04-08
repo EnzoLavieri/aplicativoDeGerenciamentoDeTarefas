@@ -37,15 +37,15 @@ Tasks:<br>
 [✓] Rota para excluir uma tarefa.<br>
 
 Categorias:<br>
-[✓]Rota para criação de uma nova categoria.<br>
-[✓]Rota para listar todas as categorias de um usuário.<br>
-[✓]Rota para obter detalhes de uma categoria específica.<br>
-[✓]Rota para atualizar uma categoria existente.<br>
-[✓]Rota para excluir uma categoria.<br>
+[✓] Rota para criação de uma nova categoria.<br>
+[✓] Rota para listar todas as categorias de um usuário.<br>
+[✓] Rota para obter detalhes de uma categoria específica.<br>
+[✓] Rota para atualizar uma categoria existente.<br>
+[✓] Rota para excluir uma categoria.<br>
 
 Funcionalidades Adicionais utilizando Métodos de Array:<br>
-[✓]Rota para filtrar tarefas por categoria.<br>
-Rota para listar tarefas concluídas.<br>
+[✓] Rota para filtrar tarefas por categoria.<br>
+[✓] Rota para listar tarefas concluídas.<br>
 Rota para listar tarefas pendentes.<br>
 Rota para listar tarefas que vencem em um determinado período.<br>
 Rota para contar o número total de tarefas de um usuário.<br>
