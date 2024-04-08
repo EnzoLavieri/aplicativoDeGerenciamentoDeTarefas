@@ -36,16 +36,10 @@ class TarefaController {
     return res.json(filteredTarefas);
   }
 
-  async findCompletedTasks(req: Request, res: Response) {
-    try {
-      const completedTasks = await tarefaService.findCompletedTasks();
-      return res.json(completedTasks);
-    } catch (error) {
-      console.error(error); // Log the error for debugging
-      return res
-        .status(500)
-        .json({ message: "Error fetching completed tasks" });
-    }
+  async findConcluidas(req: Request, res: Response) {
+    const status = req.params.status;
+    const concluidasTarefas = await tarefaService.findConcluidas(status);
+    res.json(concluidasTarefas);
   }
 }
 

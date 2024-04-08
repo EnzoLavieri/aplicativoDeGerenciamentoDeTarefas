@@ -15,16 +15,17 @@ routes.delete("/categorias/:id", categoriaController.delete);
 
 routes.post("/tarefas", tarefaController.create);
 routes.get("/tarefas", tarefaController.findAll);
-routes.get("/tarefas/:id", tarefaController.findById);
 //_____________________________________________________________________________________
 // rota para fazer o find por categoria de tarefa
+routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
+
 routes.get(
   "/tarefas/por-categoria/:categoria",
   tarefaController.findPorCategoria
 );
-routes.get("/tarefas/status", tarefaController.findCompletedTasks);
 
 //_____________________________________________________________________________________
+routes.get("/tarefas/:id", tarefaController.findById);
 routes.put("/tarefas/:id", tarefaController.update);
 routes.delete("/tarefas/:id", tarefaController.delete);
 
