@@ -55,6 +55,11 @@ class TarefaService {
     const concluidasTarefas = await tipoTarefa.find({ status: "concluida" });
     return concluidasTarefas;
   }
+
+  async findPendentes(status: string) {
+    const pendentesTarefas = await tipoTarefa.find({ status: "pendente" });
+    return pendentesTarefas;
+  }
 }
 
 export default new TarefaService();

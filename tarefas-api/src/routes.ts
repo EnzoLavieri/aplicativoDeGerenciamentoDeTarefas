@@ -16,9 +16,9 @@ routes.delete("/categorias/:id", categoriaController.delete);
 routes.post("/tarefas", tarefaController.create);
 routes.get("/tarefas", tarefaController.findAll);
 //_____________________________________________________________________________________
+routes.get("/tarefas/pendentes", tarefaController.findPendentes);
 routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
 // rota para fazer o find por categoria de tarefa
-
 routes.get(
   "/tarefas/por-categoria/:categoria",
   tarefaController.findPorCategoria

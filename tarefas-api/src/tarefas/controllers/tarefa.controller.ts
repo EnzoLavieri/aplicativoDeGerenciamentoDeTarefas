@@ -41,6 +41,12 @@ class TarefaController {
     const concluidasTarefas = await tarefaService.findConcluidas(status);
     res.json(concluidasTarefas);
   }
+
+  async findPendentes(req: Request, res: Response) {
+    const status = req.params.status;
+    const pendentesTarefas = await tarefaService.findPendentes(status);
+    res.json(pendentesTarefas);
+  }
 }
 
 export default new TarefaController();
