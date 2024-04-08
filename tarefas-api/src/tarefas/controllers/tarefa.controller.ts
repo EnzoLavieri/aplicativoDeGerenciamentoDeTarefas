@@ -36,33 +36,16 @@ class TarefaController {
     return res.json(filteredTarefas);
   }
 
-  async findConcluidas(req: Request, res: Response) {
+  async findCompletedTasks(req: Request, res: Response) {
     try {
-      const tarefasConcluidas = await tarefaService.findConcluidas();
-      return res.json(tarefasConcluidas);
+      const completedTasks = await tarefaService.findCompletedTasks();
+      return res.json(completedTasks);
     } catch (error) {
-      return res.status(500).json({ error: "Internal Server Error" });
-    }
-  }
-
-  async findPendentes(req: Request, res: Response) {
-    try {
-      const tarefasPendentes = await tarefaService.findPendentes();
-      return res.json(tarefasPendentes);
-    } catch (error) {
+      console.error(error); // Log the error for debugging
       return res
         .status(500)
-        .json({ error: "Erro ao buscar tarefas pendentes" });
+        .json({ message: "Error fetching completed tasks" });
     }
-  }
-
-  async findPorPeriodo(req: Request, res: Response) {
-    const { dataInicio, dataFim } = req.body;
-    const tarefasNoPeriodo = await tarefaService.findPorPeriodo(
-      dataInicio,
-      dataFim
-    );
-    return res.json(tarefasNoPeriodo);
   }
 }
 

@@ -4,15 +4,11 @@ import { CategoriaType } from "../types/categoria.type";
 export interface TarefaType {
   id: Number;
   titulo: String;
-  descricao: String;
+  descricao?: String;
   dataCriacao: Date;
-  dataConclusao: Date;
+  dataConclusao?: Date;
   tipo: String;
   categoria: CategoriaType;
-  status: {
-    pendente;
-    andamento;
-    concluída;
-  };
+  status: "pendente" | "em andamento" | "concluida";
   usuario: UsuarioType;
 }

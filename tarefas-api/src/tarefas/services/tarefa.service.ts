@@ -51,25 +51,9 @@ class TarefaService {
     return filteredTarefas;
   }
 
-  async findConcluidas() {
-    try {
-      const tarefasConcluidas = await tipoTarefa.find({ status: "concluída" });
-      return tarefasConcluidas;
-    } catch (error) {
-      throw new Error(`Erro ao encontrar tarefas concluídas: ${error}`);
-    }
-  }
-
-  async findPendentes() {
-    const tarefasPendentes = await tipoTarefa.find({ status: "pendente" });
-    return tarefasPendentes;
-  }
-
-  async findPorPeriodo(dataInicio: Date, dataFim: Date) {
-    const tarefasNoPeriodo = await tipoTarefa.find({
-      dataConclusao: { $gte: dataInicio, $lte: dataFim },
-    });
-    return tarefasNoPeriodo;
+  async findCompletedTasks() {
+    const completedTasks = await tipoTarefa.find({ status: "concluida" });
+    return completedTasks;
   }
 }
 

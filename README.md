@@ -1,6 +1,7 @@
 # Missao Desafio Profissional Bussola<br>
+
 https://dontpad.com/esoft5s-a-bussola<br>
-npm i -D jest @jest/globals @types/jest ts-jest supertest @types/supertest 
+npm i -D jest @jest/globals @types/jest ts-jest supertest @types/supertest
 
 Utilizando o template para uma API Rest fornecido em:<br>
 https://github.com/TI-UNICESUMAR/2024-desafio-profissional-v-ESOFT5S-B/tree/main/27-03-2024/books-api<br>
@@ -56,7 +57,7 @@ Rota para encontrar a tarefa com a descrição mais longa.<br>
 Rota para agrupar tarefas por categoria.<br>
 Rota para encontrar a tarefa mais antiga de um usuário.<br>
 
-----------------------------------------------------------------------------
+---
 
 Observação:
 Estas rotas podem ser implementadas utilizando os métodos .map, .filter, .resume, .some e outros métodos de manipulação de array para alcançar as funcionalidades desejadas, agregando complexidade média a difícil ao projeto.

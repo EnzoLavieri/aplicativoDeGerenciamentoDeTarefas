@@ -11,11 +11,11 @@ const tarefaSchema = new Schema(
     categoria: {
       type: Schema.Types.ObjectId,
       ref: "Categoria",
-      default: null,
+      required: false,
     },
     status: {
       type: String,
-      enum: ["pendente", "andamento", "concluída"],
+      enum: ["pendente", "em andamento", "concluida"],
     },
     // perguntar se o usuarioAssociado era para funcionar com o objectId, ou outro especificado
     usuarioAssociado: {
