@@ -44,7 +44,7 @@ class TarefaService {
     }
   }
 
-  // ----------- Funcionalidades Adicionais utilizando Métodos de Array: -----------
+  // ----------- Funcionalidades Adicionais utilizando Métodos de Array -----------
 
   async findPorCategoria(categoria: string) {
     const filteredTarefas = await tipoTarefa.find({ categoria: categoria });
@@ -66,6 +66,15 @@ class TarefaService {
       usuarioAssociado: usuarioId,
     });
     return totalTarefas;
+  }
+
+  async findMaisRecente(usuarioId: string) {
+    const tarefaMaisRecente = await tipoTarefa
+      .findOne({
+        usuarioAssociado: usuarioId,
+      })
+      .sort({ createdAt: -1 });
+    return tarefaMaisRecente;
   }
 }
 

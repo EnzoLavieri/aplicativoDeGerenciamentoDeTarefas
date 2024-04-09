@@ -49,7 +49,7 @@ Funcionalidades Adicionais utilizando Métodos de Array:<br>
 [✓] Rota para listar tarefas pendentes.<br>
 Rota para listar tarefas que vencem em um determinado período.<br>
 [✓] Rota para contar o número total de tarefas de um usuário.<br>
-Rota para encontrar a tarefa mais recente de um usuário.<br>
+[✓] Rota para encontrar a tarefa mais recente de um usuário.<br>
 
 Funcionalidades com Métodos de Array:<br>
 Rota para calcular a média de conclusão das tarefas.<br>

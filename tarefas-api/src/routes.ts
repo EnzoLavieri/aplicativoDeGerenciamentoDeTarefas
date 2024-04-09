@@ -19,6 +19,10 @@ routes.get("/tarefas", tarefaController.findAll);
 routes.get("/tarefas/pendentes", tarefaController.findPendentes);
 routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
 routes.get(
+  "/tarefas/mais-recente/:usuarioId",
+  tarefaController.findMaisRecente
+);
+routes.get(
   "/tarefas/usuario/:usuarioId/total",
   tarefaController.countTotalTarefasUsuario
 );
@@ -26,7 +30,6 @@ routes.get(
   "/tarefas/por-categoria/:categoria",
   tarefaController.findPorCategoria
 );
-
 //_____________________________________________________________________________________
 routes.get("/tarefas/:id", tarefaController.findById);
 routes.put("/tarefas/:id", tarefaController.update);

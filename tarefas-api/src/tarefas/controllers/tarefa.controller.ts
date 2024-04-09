@@ -28,7 +28,7 @@ class TarefaController {
     return res.json(deleteMessage);
   }
 
-  // ----------- Funcionalidades Adicionais utilizando Métodos de Array: -----------
+  // ----------- Funcionalidades Adicionais utilizando Métodos de Array -----------
 
   async findPorCategoria(req: Request, res: Response) {
     const categoria = req.params.categoria;
@@ -54,6 +54,12 @@ class TarefaController {
       usuarioId
     );
     res.json({ totalTarefas });
+  }
+
+  async findMaisRecente(req: Request, res: Response) {
+    const usuarioId = req.params.usuarioId;
+    const tarefaMaisRecente = await tarefaService.findMaisRecente(usuarioId);
+    res.json(tarefaMaisRecente);
   }
 }
 
