@@ -71,6 +71,11 @@ class TarefaController {
       await tarefaService.calcularMediaConclusao();
     res.json({ mediaConclusaoEmPorcentagem });
   }
+
+  async getDescMaisLonga(req: Request, res: Response) {
+    const descMaisLonga = await tarefaService.findDescMaisLonga();
+    return res.json(descMaisLonga);
+  }
 }
 
 export default new TarefaController();

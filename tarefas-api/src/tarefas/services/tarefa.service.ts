@@ -85,6 +85,11 @@ class TarefaService {
     const mediaConclusao = (concluidasTarefas.length / totalTarefas) * 100;
     return mediaConclusao;
   }
+
+  async findDescMaisLonga() {
+    const tarefas = await tipoTarefa.find().sort({ descricao: 1 }).limit(2);
+    return tarefas;
+  }
 }
 
 export default new TarefaService();
