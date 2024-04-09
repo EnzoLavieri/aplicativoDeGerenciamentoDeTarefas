@@ -52,7 +52,7 @@ Rota para listar tarefas que vencem em um determinado período.<br>
 [✓] Rota para encontrar a tarefa mais recente de um usuário.<br>
 
 Funcionalidades com Métodos de Array:<br>
-Rota para calcular a média de conclusão das tarefas.<br>
+[✓] Rota para calcular a média de conclusão das tarefas.<br>
 Rota para encontrar a tarefa com a descrição mais longa.<br>
 Rota para agrupar tarefas por categoria.<br>
 Rota para encontrar a tarefa mais antiga de um usuário.<br>

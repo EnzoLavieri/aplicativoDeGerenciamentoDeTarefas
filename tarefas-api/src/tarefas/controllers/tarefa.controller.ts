@@ -48,6 +48,8 @@ class TarefaController {
     res.json(pendentesTarefas);
   }
 
+  //
+
   async countTotalTarefasUsuario(req: Request, res: Response) {
     const usuarioId = req.params.usuarioId;
     const totalTarefas = await tarefaService.countTotalTarefasUsuario(
@@ -60,6 +62,14 @@ class TarefaController {
     const usuarioId = req.params.usuarioId;
     const tarefaMaisRecente = await tarefaService.findMaisRecente(usuarioId);
     res.json(tarefaMaisRecente);
+  }
+
+  // ----------- Funcionalidades com Métodos de Array -----------
+
+  async calcularMediaConclusao(req: Request, res: Response) {
+    const mediaConclusaoEmPorcentagem =
+      await tarefaService.calcularMediaConclusao();
+    res.json({ mediaConclusaoEmPorcentagem });
   }
 }
 

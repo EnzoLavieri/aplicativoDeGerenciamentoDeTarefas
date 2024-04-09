@@ -76,6 +76,15 @@ class TarefaService {
       .sort({ createdAt: -1 });
     return tarefaMaisRecente;
   }
+
+  // ----------- Funcionalidades com Métodos de Array: -----------
+
+  async calcularMediaConclusao(): Promise<number> {
+    const concluidasTarefas = await tipoTarefa.find({ status: "concluida" });
+    const totalTarefas = await tipoTarefa.countDocuments();
+    const mediaConclusao = (concluidasTarefas.length / totalTarefas) * 100;
+    return mediaConclusao;
+  }
 }
 
 export default new TarefaService();
