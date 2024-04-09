@@ -19,6 +19,10 @@ routes.get("/tarefas", tarefaController.findAll);
 routes.get("/tarefas/pendentes", tarefaController.findPendentes);
 routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
 routes.get(
+  "/tarefas/usuario/:usuarioId/total",
+  tarefaController.countTotalTarefasUsuario
+);
+routes.get(
   "/tarefas/por-categoria/:categoria",
   tarefaController.findPorCategoria
 );

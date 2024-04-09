@@ -60,6 +60,13 @@ class TarefaService {
     const pendentesTarefas = await tipoTarefa.find({ status: "pendente" });
     return pendentesTarefas;
   }
+
+  async countTotalTarefasUsuario(usuarioId: string) {
+    const totalTarefas = await tipoTarefa.countDocuments({
+      usuarioAssociado: usuarioId,
+    });
+    return totalTarefas;
+  }
 }
 
 export default new TarefaService();

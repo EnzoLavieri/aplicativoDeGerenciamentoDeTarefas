@@ -47,6 +47,14 @@ class TarefaController {
     const pendentesTarefas = await tarefaService.findPendentes(status);
     res.json(pendentesTarefas);
   }
+
+  async countTotalTarefasUsuario(req: Request, res: Response) {
+    const usuarioId = req.params.usuarioId;
+    const totalTarefas = await tarefaService.countTotalTarefasUsuario(
+      usuarioId
+    );
+    res.json({ totalTarefas });
+  }
 }
 
 export default new TarefaController();
