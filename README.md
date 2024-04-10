@@ -4,12 +4,12 @@ https://dontpad.com/esoft5s-a-bussola<br>
 npm i -D jest @jest/globals @types/jest ts-jest supertest @types/supertest
 
 Utilizando o template para uma API Rest fornecido em:<br>
-https://github.com/TI-UNICESUMAR/2024-desafio-profissional-v-ESOFT5S-B/tree/main/27-03-2024/books-api<br>
+https://github.com/TI-UNICESUMAR/2024-desafio-profissional-v-ESOFT5S-A<br>
 Desenvolva um aplicativo para gerenciamento de tarefas.
 <br>
 
 check-list:check-list:<br>
-[] - Entender a atividade, isso envolve ver a atividade<br>
+[✓] - Entender a atividade, isso envolve ver a atividade<br>
 [✓] - Instalar as dependências<br>
 [✓] - Criar as entidades<br>
 [✓] - Da um check se o servidor está funcionando<br>
@@ -17,7 +17,7 @@ check-list:check-list:<br>
 [✓] - Fazer a controller<br>
 [✓] - Criar as rotas no arquivo de rotas<br>
 [✓] - Testar as rotas<br>
-[] - Partir para as rotas com regra de negócio<br>
+[✓] - Partir para as rotas com regra de negócio<br>
 
 Entidades:<br>
 [✓] Usuário:<br>
@@ -55,7 +55,7 @@ Funcionalidades com Métodos de Array:<br>
 [✓] Rota para calcular a média de conclusão das tarefas.<br>
 [✓] Rota para encontrar a tarefa com a descrição mais longa.<br>
 [✓] Rota para agrupar tarefas por categoria.<br>
-[]Rota para encontrar a tarefa mais antiga de um usuário.<br>
+[✓] Rota para encontrar a tarefa mais antiga de um usuário.<br>
 
 ---
 

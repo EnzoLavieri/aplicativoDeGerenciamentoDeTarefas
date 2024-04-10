@@ -115,6 +115,15 @@ class TarefaService {
     ]);
     return tarefasPorCategoria;
   }
+
+  async findMaisAntiga(usuarioId: string) {
+    const tarefaMaisAntiga = await tipoTarefa
+      .findOne({
+        usuarioAssociado: usuarioId,
+      })
+      .sort({ createdAt: 1 });
+    return tarefaMaisAntiga;
+  }
 }
 
 export default new TarefaService();

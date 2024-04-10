@@ -88,6 +88,12 @@ class TarefaController {
       res.status(500).json({ message: "Erro ao buscar tarefas por categoria" });
     }
   }
+
+  async findMaisAntiga(req: Request, res: Response) {
+    const usuarioId = req.params.usuarioId;
+    const tarefaMaisAntiga = await tarefaService.findMaisAntiga(usuarioId);
+    res.json(tarefaMaisAntiga);
+  }
 }
 
 export default new TarefaController();

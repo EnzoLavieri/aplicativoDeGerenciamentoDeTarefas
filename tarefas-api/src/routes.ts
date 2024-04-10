@@ -21,6 +21,7 @@ routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
 routes.get("/tarefas/agrupTarefas", tarefaController.getAgrupCategoria);
 routes.get("/tarefas/descMaisLonga", tarefaController.getDescMaisLonga);
 routes.get("/media-conclusao", tarefaController.calcularMediaConclusao);
+routes.get("/tarefas/mais-antiga/:usuarioId", tarefaController.findMaisAntiga);
 routes.get(
   "/tarefas/mais-recente/:usuarioId",
   tarefaController.findMaisRecente
