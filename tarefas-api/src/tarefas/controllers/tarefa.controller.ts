@@ -76,6 +76,18 @@ class TarefaController {
     const descMaisLonga = await tarefaService.findDescMaisLonga();
     return res.json(descMaisLonga);
   }
+
+  async getAgrupCategoria(req: Request, res: Response) {
+    try {
+      const categoria = req.params.categoria;
+      const tarefasPorCategoria = await tarefaService.findAgrupCategoria(
+        categoria
+      );
+      res.json(tarefasPorCategoria);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar tarefas por categoria" });
+    }
+  }
 }
 
 export default new TarefaController();

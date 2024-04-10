@@ -18,6 +18,7 @@ routes.get("/tarefas", tarefaController.findAll);
 //_____________________________________________________________________________________
 routes.get("/tarefas/pendentes", tarefaController.findPendentes);
 routes.get("/tarefas/concluidas", tarefaController.findConcluidas);
+routes.get("/tarefas/agrupTarefas", tarefaController.getAgrupCategoria);
 routes.get("/tarefas/descMaisLonga", tarefaController.getDescMaisLonga);
 routes.get("/media-conclusao", tarefaController.calcularMediaConclusao);
 routes.get(

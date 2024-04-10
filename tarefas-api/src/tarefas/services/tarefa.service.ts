@@ -87,8 +87,33 @@ class TarefaService {
   }
 
   async findDescMaisLonga() {
-    const tarefas = await tipoTarefa.find().sort({ descricao: 1 }).limit(2);
+    const tarefas = await tipoTarefa.aggregate([
+      {
+        $project: {
+          descricao: 1,
+          numeroDeCaracter: { $strLenCP: "$descricao" },
+        },
+      },
+      {
+        $sort: { numeroDeCaracter: -1 },
+      },
+      {
+        $limit: 1,
+      },
+    ]);
     return tarefas;
+  }
+
+  async findAgrupCategoria(categoria: string) {
+    const tarefasPorCategoria = await tipoTarefa.aggregate([
+      {
+        $group: {
+          _id: "$categoria",
+          totalTarefas: { $sum: 1 },
+        },
+      },
+    ]);
+    return tarefasPorCategoria;
   }
 }
 
