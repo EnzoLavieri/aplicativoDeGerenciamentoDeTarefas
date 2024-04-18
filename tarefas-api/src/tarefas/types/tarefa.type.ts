@@ -7,6 +7,7 @@ export interface TarefaType {
   descricao?: String;
   dataCriacao: Date;
   dataConclusao?: Date;
+  dataVencimento: Date;
   tipo: String;
   categoria: CategoriaType;
   status: "pendente" | "em andamento" | "concluida";

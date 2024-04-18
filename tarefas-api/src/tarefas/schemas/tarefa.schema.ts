@@ -7,8 +7,7 @@ const tarefaSchema = new Schema(
     descricao: String,
     dataCriacao: Date,
     dataConclusao: Date,
-    //Perguntar se é para adicionar o atributo de dataVencimento, pois ele pede
-    //para criar uma rota para listar tarefas que vencem em um determinado período.
+    //Vou implemenar dataVecimeto, pois voce nao puclicou o issue de duvia o git do desafio profisssioal :/
     dataVencimento: Date,
     tipo: String,
     categoria: {

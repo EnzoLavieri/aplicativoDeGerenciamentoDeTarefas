@@ -25,6 +25,7 @@ class TarefaService {
         descricao: tarefa.descricao,
         dataCriacao: tarefa.dataCriacao,
         dataConclusao: tarefa.dataConclusao,
+        dataVencimento: tarefa.dataVencimento,
         tipo: tarefa.tipo,
         categoria: tarefa.categoria,
         status: tarefa.status,
@@ -59,6 +60,13 @@ class TarefaService {
   async findPendentes(status: string) {
     const pendentesTarefas = await tipoTarefa.find({ status: "pendente" });
     return pendentesTarefas;
+  }
+
+  async findPorDataVencimento(dataVencimento: Date) {
+    const tarefasComVencimento = await tipoTarefa.find({
+      dataVencimento: { $eq: dataVencimento },
+    });
+    return tarefasComVencimento;
   }
 
   async countTotalTarefasUsuario(usuarioId: string) {

@@ -48,7 +48,10 @@ class TarefaController {
     res.json(pendentesTarefas);
   }
 
-  //
+  async findPorDataVencimento(req: Request, res: Response) {
+    const dataVencimentoString = req.params.dataVencimento;
+    const dataVencimento = new Date(dataVencimentoString);
+  }
 
   async countTotalTarefasUsuario(req: Request, res: Response) {
     const usuarioId = req.params.usuarioId;
